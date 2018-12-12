@@ -2,7 +2,7 @@
 
 if [ ! -d "$SNAP_USER_DATA/etc" ]; then
   mkdir $SNAP_USER_DATA/etc/
-  cp -R $SNAP/etc/electroneumd.conf $SNAP_USER_DATA/etc/electroneumd.conf
+  cp -R $SNAP/etc/abcd.conf $SNAP_USER_DATA/etc/abcd.conf
 fi
 
-exec "$SNAP/bin/electroneumd" "$@"
+exec "$SNAP/bin/abcd" "$@"

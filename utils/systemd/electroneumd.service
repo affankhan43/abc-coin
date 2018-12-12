@@ -8,10 +8,10 @@ Group=electroneum
 WorkingDirectory=~
 
 Type=forking
-PIDFile=/var/run/electroneumd.pid
+PIDFile=/var/run/abcd.pid
 
-ExecStart=/usr/bin/electroneumd --config-file /etc/electroneumd.conf \
-    --detach --pidfile /var/run/electroneumd.pid
+ExecStart=/usr/bin/abcd --config-file /etc/abcd.conf \
+    --detach --pidfile /var/run/abcd.pid
 
 [Install]
 WantedBy=multi-user.target

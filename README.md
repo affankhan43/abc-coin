@@ -68,10 +68,10 @@ Installing a snap is very quick. Snaps are secure. They are isolated with all of
         docker build -t electroneum .
      
         # either run in foreground
-        docker run -it -v /electroneum/chain:/root/.electroneum -v /electroneum/wallet:/wallet -p 26967:26967 electroneum
+        docker run -it -v /electroneum/chain:/root/.electroneum -v /electroneum/wallet:/wallet -p 26977:26977 electroneum
 
         # or in background
-        docker run -it -d -v /electroneum/chain:/root/.electroneum -v /electroneum/wallet:/wallet -p 26967:26967 electroneum
+        docker run -it -d -v /electroneum/chain:/root/.electroneum -v /electroneum/wallet:/wallet -p 26977:26977 electroneum
 
 Packaging for your favorite distribution would be a welcome contribution!
 
@@ -271,6 +271,6 @@ electroneum-wallet-cli, and possibly electroneumd, if you get crashes refreshing
  to add a rule to allow this connection too, in addition to telling torsocks to
  allow inbound connections. Full example:
 
-     sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 26968 -j ACCEPT
+     sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 26978 -j ACCEPT
      DNS_PUBLIC=tcp torsocks ./electroneumd --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
          --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain

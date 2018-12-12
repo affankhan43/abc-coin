@@ -1119,10 +1119,10 @@ bool t_rpc_command_executor::print_status()
   bool daemon_is_alive = m_rpc_client->check_connection();
 
   if(daemon_is_alive) {
-    tools::success_msg_writer() << "electroneumd is running";
+    tools::success_msg_writer() << "abcd is running";
   }
   else {
-    tools::fail_msg_writer() << "electroneumd is NOT running";
+    tools::fail_msg_writer() << "abcd is NOT running";
   }
 
   return true;

@@ -9,10 +9,10 @@ grade: devel
 confinement: strict
 
 apps:
-    electroneumd:
+    abcd:
         daemon: forking
         command: |
-          electroneumd-wrapper --detach --data-dir ${SNAP_COMMON} --config-file ${SNAP_USER_DATA}/etc/electroneumd.conf
+          abcd-wrapper --detach --data-dir ${SNAP_COMMON} --config-file ${SNAP_USER_DATA}/etc/abcd.conf
         plugs:
             - network
             - network-bind
@@ -68,8 +68,8 @@ parts:
         plugin: dump
         source: .
         organize:
-            contrib/snap/electroneumd.conf: etc/electroneumd.conf
-            contrib/snap/electroneumd-wrapper: bin/electroneumd-wrapper
+            contrib/snap/abcd.conf: etc/abcd.conf
+            contrib/snap/abcd-wrapper: bin/abcd-wrapper
         prime:
             - etc
             - bin
